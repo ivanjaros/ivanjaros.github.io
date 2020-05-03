@@ -15,13 +15,6 @@
     <section id="menu">
       <div class="row align-justify">
         <div class="small-6 columns"><h1 id="logo">ivan jaros</h1></div>
-        <div class="columns shrink">
-          <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
       </div>
     </section>
     <section id="intro" class="expanded row align-middle align-center">
@@ -30,52 +23,22 @@
     <main>
       <section id="about">
         <div class="row columns">
-          <h2>About Me</h2>
+            <p>
+              The main service I provide is creativity and direction. My style is unique and differs from most commercial directors, as it should be for everyone. I will never shoot the product or the service directly as the main character, with smiley and happy faces all around it.
+              I do not believe in forcing the subject onto the audience. Instead, I am a firm believer that the audience is smart and wants to consume content that feels more natural, smart and witty.
+              Hence, I will always create a story, symbolism, metaphor or emotion around the product, or service, and make it a part of the the tale we will unveil for the audience. The product, or service,
+              might even become the butt of a joke and the client has to be OK with that in order for me to use my creativity freely, without much restrictions, and produce great content for the audience.
+              I am a strong proponent of contrasts and juxtaposition as well as "show don't tell" mantra, mostly via reaction shots. A simple smile or look says more than a line of dialogue.
+              And that makes the situation much stronger for me than long-winded slogans and lists of attributes and properties of whatever is being promoted.
+            </p>
           <p>
-            Throughout my entire life, movies, TV shows and cinema altogether, were the best escapism, I could have ever imagined, to spend my free time on.
-            I have always had a vivid imagination. I even remember creating a game, during my elementary school years,
-            where I have designed multiple levels on a piece of paper and took my schoolmates on a journey where they
-            had to solve puzzles, fight creatures and escape traps, by simple movement of a pen on the paper.
-          </p>
-          <p>
-            Unfortunately I grew up in a place that lacked in solid film-making environment and so I didn't see a path
-            that could lead me into the career of movie-making and by my sheer curiosity I have ended up with a career of a programmer instead.
-            I spent almost all of my free time working on personal projects, mostly one major one that took a decade of my life,
-            only to come to a conclusion that the goals I have set initially will never be fulfilled to my satisfaction and vision due to the fast pace of the technology and services today. And so I was finally freed
-            from this period of my life, that I am finally ready to leave behind, and follow my childhood dreams of working on films.
-            Though I do not regret this period whatsoever. I have become a master problem-solver and that is a great skill to have, especially when it comes to
-            the production aspect of shooting videos.
-          </p>
-          <p>
-            Due to the way the industry works, I have decided to follow the path of making commercials. It's like making thousands of tiny shorts and I love the creative part of coming up with great ideas
-            and transforming these intangible nuggets of gold into something real in front of the camera. Most of the time I have trouble stopping myself and choosing the final idea because my creative mind just keeps on coming up with new ideas and improvements over and over again.
-            I also write scripts and am in the process of looking for a production company to partner up with in order to produce a series I came up with.
-          </p>
-        </div>
-      </section>
-      <section id="services">
-        <div class="row columns">
-          <h2>Services</h2>
-          <p>
-            The main service I provide is creativity and direction. Based on the requirements, I will create an idea for your product or service and translate it into video.
-            I am a master problem-solver so I can also take care of any issues you are facing in the creative part of pre-existing works. This of course means that we must be creatively on the same page from the get-go.
-          </p>
-          <p>
-            My style is unique and differs from most commercial directors, as it should be for everyone. I will never shoot the product or the service directly as the main character, with smiley and happy faces all around it.
-            I do not believe in forcing the subject onto the audience. Instead, I am a firm believer that the audience is smart and wants to consume content that feels more natural, smart and witty.
-            Hence, I will always create a story, symbolism, metaphor or emotion around the product, or service, and make it a part of the the tale we will unveil for the audience. The product, or service,
-            might even become the butt of a joke and the client has to be OK with that in order for me to use my creativity freely, without much restrictions, and produce great content for the audience.
-          </p>
-          <p>
-            I am a strong proponent of contrasts and juxtaposition as well as "show don't tell" mantra, mostly via reaction shots. A simple smile or a look says more than a line of dialogue.
-            And that makes the situation much stronger for me than long-winded slogans and lists of attributes and properties of whatever is being promoted. If the product is good, people will buy it.
-            If it isn't, no amount of trickery will force the consumer into buying it more than once.
+            Please, do not hesitate to contact me with requests for treatments, collaboration, questions, proposals...
           </p>
         </div>
       </section>
       <section id="contact" class="row align-center">
         <div class="small-12 medium-8 columns">
-          <div id="email" class="loading">Loading e-mail address...</div>
+          <div id="email" class="loading"></div>
         </div>
       </section>
     </main>
@@ -103,8 +66,15 @@
       window.location.hash = id;
     });
 
-    setTimeout(function() {
-      jQuery("#email.loading").removeClass('loading').html(atob("ZGlyZWN0b3JAaXZhbmphcm9zLmNvbQ=="));
-    }, 5000);
+    let second = 10;
+    let ticker = setInterval(function () {
+      if (second === 0) {
+        clearInterval(ticker);
+        jQuery("#email.loading").removeClass('loading').html(atob("ZGlyZWN0b3JAaXZhbmphcm9zLmNvbQ=="));
+      } else {
+        jQuery("#email.loading").html("Loading e-mail address in " + second);
+        second--;
+      }
+    }, 1000);
   </script>
 </body>
