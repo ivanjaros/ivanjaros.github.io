@@ -1,0 +1,105 @@
+html {
+  font-size: 15px;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans",sans-serif;
+}
+
+#page {
+  margin-top: 4em;
+}
+
+#menu {
+  background: rgba(0, 0, 0, 0) linear-gradient(90deg, #aa1384 0px, #8266b7) repeat scroll 0 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+#menu ul.menu li a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#menu ul.menu li a:hover,
+#menu ul.menu li a.is-active {
+  color: #ffc15a;
+}
+
+#logo {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 0 0.5em 2px 0.5em;
+  margin: 0;
+  display: inline;
+  letter-spacing: -1px;
+  font-family: Lato, sans-serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#logo:hover {
+  color: #ffc15a;
+  border-color: #ffc15a;
+}
+
+#intro {
+  color: #ffffff;
+  height: 40rem;
+  background-attachment: fixed;
+  background-image: url("../media/header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#intro-content {
+  font-size: 3em;
+  background-color: #000;
+  padding: 1rem 2rem;
+  z-index: 1;
+  margin: 0;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.5);
+}
+
+main section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+#notice {
+  font-size: 80%;
+}
+
+#style h5 {
+  color: #fff;
+}
+
+#style {
+  background-attachment: fixed;
+  background-image: url("../media/pexels-952670.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+
+#style p {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1em;
+}
+
+#email {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 3rem;
+}
+
+#email.loading {
+  color: #868688;
+}
