@@ -1,78 +1,43 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-  <title>Ivan Jaros | Director & Creative</title>
-  <meta charset="utf-8" />
-  <meta property="og:image" content="dist/header.jpg" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/foundation.min.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+  <title>Ivan Jaros | Director</title>
+  <style>
+    html {
+      height: 100%;
+      background-image: url("header.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    body {
+      font-family: "arial";
+      font-size: 16px;
+      color: #333;
+    }
+    div {
+      background-color: rgba(255, 255, 255, 0.9);
+      width: auto;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 25%;
+    }
+  </style>
 </head>
 <body>
-  <div id="page">
-    <section id="menu">
-      <div class="row align-justify">
-        <div class="small-6 columns"><h1 id="logo">ivan jaros</h1></div>
-      </div>
-    </section>
-    <section id="intro" class="expanded row align-middle align-center">
-      <h4 id="intro-content">commercials you want to watch</h4>
-    </section>
-    <main>
-      <section id="about">
-        <div class="row columns">
-            <p>
-              The main service I provide is creativity and direction. My style is unique and differs from most commercial directors, as it should be for everyone. I will never shoot the product or the service directly as the main character, with smiley and happy faces all around it.
-              I do not believe in forcing the subject onto the audience. Instead, I am a firm believer that the audience is smart and wants to consume content that feels more natural, smart and witty.
-              Hence, I will always create a story, symbolism, metaphor or emotion around the product, or service, and make it a part of the the tale we will unveil for the audience. The product, or service,
-              might even become the butt of a joke and the client has to be OK with that in order for me to use my creativity freely, without much restrictions, and produce great content for the audience.
-              I am a strong proponent of contrasts and juxtaposition as well as "show don't tell" mantra, mostly via reaction shots. A simple smile or look says more than a line of dialogue.
-              And that makes the situation much stronger for me than long-winded slogans and lists of attributes and properties of whatever is being promoted.
-            </p>
-          <p>
-            Please, do not hesitate to contact me with requests for treatments, collaboration, questions, proposals...
-          </p>
-        </div>
-      </section>
-      <section id="contact" class="row align-center">
-        <div class="small-12 medium-8 columns">
-          <div id="email" class="loading"></div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <section id="notice" class="row columns text-center align-center">
-        <p>
-          &copy;Ivan Jaros, made in Slovakia | <a href="https://www.instagram.com/ivan_jaros" target="_blank" rel="noreferrer">Instagram</a><br>
-          background images sourced from Pexels.com
-        </p>
-      </section>
-    </footer>
+  <div>
+    <p>
+      For enquiries, message me via <a href="https://www.instagram.com/ivan_jaros">instagram</a>. Redirecting in <i id="ticker">5</i>.
+    </p>
   </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
   <script>
-    jQuery('#logo').on("click", function(event) {
-      jQuery("html").stop().animate({scrollTop: 0}, 500, 'swing');
-      window.location.hash = "";
-    });
-    jQuery("ul.menu a").on("click", function(event) {
-      event.preventDefault();
-      let id = jQuery(this).attr('href');
-      let $target = jQuery(id);
-      jQuery("html").stop().animate({scrollTop: $target.offset().top}, 500, 'swing');
-      window.location.hash = id;
-    });
-
-    let second = 10;
+    let second = 4;
     let ticker = setInterval(function () {
       if (second === 0) {
         clearInterval(ticker);
-        jQuery("#email.loading").removeClass('loading').html(atob("ZGlyZWN0b3JAaXZhbmphcm9zLmNvbQ=="));
+        window.location = "https://www.instagram.com/ivan_jaros";
       } else {
-        jQuery("#email.loading").html("Loading e-mail address in " + second);
+        document.getElementById("ticker").innerText = second;
         second--;
       }
     }, 1000);
