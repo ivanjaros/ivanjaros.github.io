@@ -1,45 +1,108 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-  <title>Ivan Jaros | Director</title>
-  <style>
-    html {
-      height: 100%;
-      background-image: url("header.jpg");
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    body {
-      font-family: "arial";
-      font-size: 16px;
-      color: #333;
-    }
-    div {
-      background-color: rgba(255, 255, 255, 0.9);
-      width: auto;
-      padding: 1rem;
-      text-align: center;
-      margin-top: 25%;
-    }
-  </style>
+  <title>Ivan Jaros | Commercial Director & Creative Force</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Commercials you want to watch" />
+  <meta name="keywords" content="tvc, director, commercial" />
+  <meta name="author" content="Ivan Jaros">
+  <meta property="og:image" content="dist/header.jpg" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <p>
-      For enquiries, message me via <a href="https://www.instagram.com/ivan_jaros">instagram</a>. Redirecting in <i id="ticker">5</i>.
-    </p>
+  <div id="page">
+    <section id="menu">
+      <div class="row align-justify">
+        <div class="small-6 columns"><h1 id="logo">IVAN JAROS</h1></div>
+        <div class="columns shrink">
+          <ul class="menu">
+            <li><a href="#about">Bio</a></li>
+            <li><a href="#style">Style</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="intro" class="expanded row align-middle align-center">
+      <h5 id="intro-content">COMMERCIAL DIRECTOR</h5>
+    </section>
+    <main>
+      <section id="about">
+        <div class="row columns">
+          <h5>ABOUT ME</h5>
+          <p>
+            Throughout my entire life, movies, TV shows and cinema altogether, were the best escapism, I could have ever imagined, to spend my free time on.
+            I have always had a vivid imagination. I even remember creating a game, during my elementary school years,
+            where I have designed multiple levels on a piece of paper and took my schoolmates on a journey where they
+            had to solve puzzles, fight creatures and escape traps, by simple movement of a pen on the paper.
+          </p>
+          <p>
+            Unfortunately, I grew up in a place that lacked in solid film-making environment, as most people do. Not to mention the level of available technology, back then. Or to be precise, the lack of. I didn't see a path
+            that could lead me into the career of movie-making and by my sheer curiosity I have ended up with a career of a programmer instead.
+            I spent almost all of my free time working on personal projects, mostly one major one that took a decade of my life,
+            only to come to a conclusion that the goals I have set initially will never be fulfilled to my satisfaction and vision due to the fast pace of the technology and services today. And so I was finally freed
+            from this period of my life, that I am finally ready to leave behind, and follow my childhood dreams of working on films.
+            Though I do not regret this period whatsoever. I have become a master problem-solver and that is a great skill to have, especially when it comes to
+            the production aspect of shooting videos.
+          </p>
+          <p>
+            Due to the way the industry works, I have decided to follow the path of making commercials. It's like making thousands of tiny short films and I love the creative part of coming up with great ideas
+            and transforming these intangible nuggets of gold into something real in front of the camera. In actuality, I was already imagining cool commercial ideas way back, during my elementary school years, so this aspect is an old friend of mine. Most of the time I have trouble stopping myself and choosing the final idea because my creative mind just keeps on coming up with new ideas and improvements over and over again.
+            I also write scripts and am in the process of looking for a production company to partner up with in order to produce a series I came up with.
+          </p>
+        </div>
+      </section>
+      <section id="style">
+        <div class="row columns">
+          <h5>STYLE</h5>
+          <p>
+            My style is more in line with <i>what</i> is being communicated instead <i>how</i> it is being communicated. In other words, I prefer story over visuals. I will never bring up the subject directly as the main character, with smiley and happy faces all around it.
+            I do not believe in forcing the subject onto the audience and I think this is outdated way of thinking about promotion. Instead, I am a firm believer that the audience is smart and wants to consume content that feels more natural, smart and witty. This results in better emotional connection between the audience and the subject.
+            Hence, I will always create a story, symbolism, metaphor or emotion around the subject and make it a part of the tale to unveil for the audience.
+          </p>
+          <p>
+            I am a strong proponent of contrasts and juxtaposition as well as "show don't tell" mantra, mostly via reaction shots. A simple smile or a look says more than a line of dialogue.
+            And that makes the situation much stronger for me than long-winded slogans and lists of attributes and properties of whatever is being promoted. There is always some sort of story at play.
+            Simply matching unrelated shots with fast-paced edits and music is more of a documentary style, which is not what I seek to produce.
+          </p>
+        </div>
+      </section>
+      <section id="contact" class="row align-center">
+        <div class="columns">
+          <div id="email" class="loading">loading contact information...</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="notice" class="row columns text-center align-center">
+        <p>
+          &copy;Ivan Jaros, made in Slovakia | <a href="https://www.instagram.com/ivan_jaros" target="_blank" rel="noreferrer">Instagram</a><br>
+          background image #952670 sourced from Pexels.com by Daniel Absi and #211065925 from Bigstockphoto.com by Lia Koltyrina
+        </p>
+      </section>
+    </footer>
   </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script>
-    let second = 4;
-    let ticker = setInterval(function () {
-      if (second === 0) {
-        clearInterval(ticker);
-        window.location = "https://www.instagram.com/ivan_jaros";
-      } else {
-        document.getElementById("ticker").innerText = second;
-        second--;
-      }
-    }, 1000);
+    jQuery('#logo').on("click", function(event) {
+      jQuery("html").stop().animate({scrollTop: 0}, 500, 'swing');
+      window.location.hash = "";
+    });
+    jQuery("ul.menu a").on("click", function(event) {
+      event.preventDefault();
+      let id = jQuery(this).attr('href');
+      let $target = jQuery(id);
+      jQuery("html").stop().animate({scrollTop: $target.offset().top}, 500, 'swing');
+      window.location.hash = id;
+    });
+
+    setTimeout(function() {
+      jQuery("#email.loading").removeClass('loading').html(atob("ZGlyZWN0b3JAaXZhbmphcm9zLmNvbQ=="));
+    }, 5000);
   </script>
 </body>
