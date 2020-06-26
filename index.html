@@ -1,12 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-  <title>Ivan Jaros | Commercial Director</title>
+  <title>Ivan Jaros</title>
   <meta charset="utf-8" />
-  <meta name="description" content="Ivan Jaros is up-and-coming commercial director based in Slovakia." />
-  <meta name="keywords" content="tvc, director, commercial" />
   <meta name="author" content="Ivan Jaros">
-  <meta property="og:image" content="header.jpg" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/foundation.min.css">
@@ -14,44 +11,8 @@
 </head>
 <body>
   <main class="expanded collapse row align-middle">
-    <section id="left" class="columns">
-        <div class="text-right" id="ma">loading&nbsp;</div>
-    </section>
-    <section id="right" class="columns">
-        <div class="text-left" id="mb">&nbsp;email</div>
+    <section class="columns text-center">
+        here be dragons
     </section>
   </main>
-
-  <script>
-      let $left = document.getElementById("left");
-      let $right = document.getElementById("right");
-      let run = 1;
-      let i = 0;
-      let add = 5;
-      let loop = setInterval(function () {
-        $left.style["background-color"] = "rgb(" + (255 - i) + ", " + (255 - i) + ", " + (255 - i) + ")";
-        $right.style["background-color"] = "rgb(" + i + ", " + i + ", " + i + ")";
-
-        $left.style["color"] = "rgb(" + i + ", " + i + ", " + i + ")";
-        $right.style["color"] = "rgb(" + (255 - i) + ", " + (255 - i) + ", " + (255 - i) + ")";
-
-        i += add;
-
-        if (i < 0 || i > 255) {
-          add *= -1;
-
-          run++;
-          if (run >= 7) {
-            clearInterval(loop);
-            document.getElementById("ma").innerText = atob("ZGlyZWN0b3JAaXY=");
-            document.getElementById("mb").innerText = atob("YW5qYXJvcy5jb20=");
-
-            $left.style["background-color"] = "#fff";
-            $right.style["background-color"] = "#fff";
-            $left.style["color"] = "#000";
-            $right.style["color"] = "#000";
-          }
-        }
-      }, 20);
-  </script>
 </body>
